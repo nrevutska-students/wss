@@ -1,12 +1,16 @@
-# fly.toml file generated for ws-server on 2023-02-13T23:39:36+02:00
+# fly.toml file generated for ws-server on 2023-02-13T23:50:24+02:00
 
 app = "ws-server"
 
 [env]
   PORT = "8080"
 
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
+
 [[services]]
-  internal_port = 8080
+  internal_port = 6001
   protocol = "tcp"
   [services.concurrency]
     hard_limit = 25

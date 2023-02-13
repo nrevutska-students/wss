@@ -1,14 +1,6 @@
-FROM node:current-alpine
+FROM quay.io/soketi/soketi:1.0-16-debian
 
-WORKDIR /app
-
-COPY package.json .
-COPY package-lock.json .
-
-RUN npm install --production
-
-COPY . .
-
-ENV PORT=8080
-
-CMD [ "npm","start" ]
+ENV SOKETI_DEBUG=0
+ENV SOKETI_DEFAULT_APP_KEY='PUSHER_KEY'
+ENV SOKETI_DEFAULT_APP_ID='4712912'
+ENV SOKETI_DEFAULT_APP_SECRET='PUSHER_SECREY'
