@@ -26,4 +26,4 @@ app = "ws-server"
 
   [[services.tcp_checks]]
     interval = 10000
-    timeout = 2000
+    timeout = 6000
